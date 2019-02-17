@@ -1,0 +1,8 @@
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/elements/button.sass';
+
+.button {
+  &.is-full-width {
+    width: 100%;
+  }
+}

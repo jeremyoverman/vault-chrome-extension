@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "es2015"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // "esModuleInterop": true,
+    "outDir": "dist/js",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "experimentalDecorators": true,
+    "baseUrl": "src",
+    "paths": {
+      "@stores": ["popup/stores/index.ts"],
+      "@actions": ["background/actions.ts"],
+      "@components/*": ["popup/components/*"],
+      "@stores/*": ["popup/stores/*"],
+      "@models/*": ["models/*"],
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+}
