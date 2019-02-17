@@ -1,5 +1,5 @@
 import { observable, action, runInAction, computed } from 'mobx';
-import { login, getSession, logout } from '@actions';
+import { login, getSession, logout } from '@actions/session';
 import { stores } from '@stores';
 
 export class SessionStore {
@@ -10,8 +10,11 @@ export class SessionStore {
   }
 
   @action login = async (token: string) => {
+    console.log('login')
     try {
       let response = await login.invoke({ token })
+
+      console.log(response)
 
       runInAction(() => {
         this.token = response
@@ -27,7 +30,6 @@ export class SessionStore {
     await logout.invoke();
 
     runInAction(() => {
-      console.log('log out')
       this.token = ''
       stores.userInterface.closeOptions()
     })

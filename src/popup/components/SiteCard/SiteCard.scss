@@ -1,0 +1,11 @@
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/components/card.sass';
+@import 'bulma/sass/elements/icon.sass';
+
+.site-card {
+  cursor: pointer;
+
+  .card-footer {
+    border-top: 0px;
+  }
+}

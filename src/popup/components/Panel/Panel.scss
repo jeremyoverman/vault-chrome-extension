@@ -4,7 +4,7 @@
 @import 'bulma/sass/components/message.sass';
 
 .popup {
-  width: 300px;
+  width: 350px;
   height: 500px;
 
   display: flex;
@@ -18,7 +18,7 @@
       width: 100%;
       flex-direction: column;
       align-items: center;
-      background-color: black;
+      background-color: #0a0a0a;
 
       img {
         width: 125px;
@@ -36,7 +36,10 @@
   }
 
   .content {
-    padding: 15px;
+    &.padded {
+      padding: 15px;
+    }
+    overflow-y: auto;
     flex-grow: 1;
   }
 

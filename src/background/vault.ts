@@ -10,16 +10,24 @@ export interface IVaultConfig {
 export class Vault {
   constructor (public config: IVaultConfig) { }
 
+  headers: { [name: string]: string} = {}
+
   get base() {
     let { protocol, host, port } = this.config;
 
     return `${protocol}://${host}:${port}/v1`
   }
 
-  get sites() {
+  get siteData() {
     let { basePath } = this.config;
 
     return `${this.base}/secret/data/${basePath}`;
+  }
+
+  get siteMeta() {
+    let { basePath } = this.config;
+
+    return `${this.base}/secret/metadata/${basePath}`;
   }
 
   async loginWithToken (token: string) {
@@ -30,7 +38,7 @@ export class Vault {
     let response = await axios.get(`${this.base}/secret/config`, { headers });
 
     if (response.status === 200) {
-      axios.defaults = { headers }
+      this.headers = headers
 
       return token;
     } else {
@@ -38,15 +46,27 @@ export class Vault {
     }
   }
 
-  async getSites () {
-    let response = await axios.get(`${this.sites}/testsite.com/jeremyoverman`)
+  async getChildren (root: string = '') {
+    if (root && !root.startsWith('/')) {
+      root = `/${root}`
+    }
 
-    console.log(response)
+    try {
+      let response = await axios.get(`${this.siteMeta}${root}?list=true`, { headers: this.headers })
+
+      return response.data.data.keys;
+    } catch (err) {
+      throw new Error(`Error retreiving site list.`)
+    }
   }
 
   async getSiteUser (site: string, user: string) {
-    let response = await axios.get(`${this.sites}/${site}/${user}`)
+    try {
+      let response = await axios.get(`${this.siteData}/${site}/${user}`, { headers: this.headers })
 
-    console.log(response)
+      return response.data.data;
+    } catch (err) {
+      throw new Error(`Error retreiving user.`)
+    }
   }
 }

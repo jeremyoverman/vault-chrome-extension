@@ -15,7 +15,8 @@
     "baseUrl": "src",
     "paths": {
       "@stores": ["popup/stores/index.ts"],
-      "@actions": ["background/actions.ts"],
+      "@actions": ["background/actions/index.ts"],
+      "@actions/*": ["background/actions/*"],
       "@components/*": ["popup/components/*"],
       "@stores/*": ["popup/stores/*"],
       "@models/*": ["models/*"],

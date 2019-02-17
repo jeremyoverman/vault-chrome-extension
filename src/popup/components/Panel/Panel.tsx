@@ -6,9 +6,13 @@ import { InjectedComponent } from '@stores';
 import { UserInterfaceStore } from '@stores/interface';
 import { inject, observer } from 'mobx-preact';
 
-export class PanelContent extends Component {
+interface PanelContentProps {
+  padded?: Boolean;
+}
+
+export class PanelContent extends Component<PanelContentProps, {}> {
   render () {
-    return <div className="content">{this.props.children}</div>
+    return <div className={`content ${this.props.padded !== false ? 'padded' : ''}`}>{this.props.children}</div>
   }
 }
 

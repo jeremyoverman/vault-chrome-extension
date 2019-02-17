@@ -1799,6 +1799,21 @@ exports.push([module.i, "", ""]);
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/popup/components/MainPanel/MainPanel.scss":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/lib/loader.js??ref--5-3!./src/popup/components/MainPanel/MainPanel.scss ***!
+  \**********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "", ""]);
+
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/popup/components/Panel/Panel.scss":
 /*!**************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/lib/loader.js??ref--5-3!./src/popup/components/Panel/Panel.scss ***!
@@ -1808,7 +1823,37 @@ exports.push([module.i, "", ""]);
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "@keyframes spinAround {\n  from {\n    transform: rotate(0deg); }\n  to {\n    transform: rotate(359deg); } }\n\n.delete {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.block:not(:last-child), .highlight:not(:last-child), .message:not(:last-child) {\n  margin-bottom: 1.5rem; }\n\n.delete {\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  pointer-events: auto;\n  display: inline-block;\n  flex-grow: 0;\n  flex-shrink: 0;\n  font-size: 0;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px; }\n  .delete::before, .delete::after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    transform-origin: center center; }\n  .delete::before {\n    height: 2px;\n    width: 50%; }\n  .delete::after {\n    height: 50%;\n    width: 2px; }\n  .delete:hover, .delete:focus {\n    background-color: rgba(10, 10, 10, 0.3); }\n  .delete:active {\n    background-color: rgba(10, 10, 10, 0.4); }\n  .is-small.delete {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px; }\n  .is-medium.delete {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px; }\n  .is-large.delete {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px; }\n\n.loader {\n  animation: spinAround 500ms infinite linear;\n  border: 2px solid #dbdbdb;\n  border-radius: 290486px;\n  border-right-color: transparent;\n  border-top-color: transparent;\n  content: \"\";\n  display: block;\n  height: 1em;\n  position: relative;\n  width: 1em; }\n\n.heading {\n  display: block;\n  font-size: 11px;\n  letter-spacing: 1px;\n  margin-bottom: 5px;\n  text-transform: uppercase; }\n\n.highlight {\n  font-weight: 400;\n  max-width: 100%;\n  overflow: hidden;\n  padding: 0; }\n  .highlight pre {\n    overflow: auto;\n    max-width: 100%; }\n\n.number {\n  align-items: center;\n  background-color: whitesmoke;\n  border-radius: 290486px;\n  display: inline-flex;\n  font-size: 1.25rem;\n  height: 2em;\n  justify-content: center;\n  margin-right: 1.5rem;\n  min-width: 2.5em;\n  padding: 0.25rem 0.5rem;\n  text-align: center;\n  vertical-align: top; }\n\n.icon {\n  align-items: center;\n  display: inline-flex;\n  justify-content: center;\n  height: 1.5rem;\n  width: 1.5rem; }\n  .icon.is-small {\n    height: 1rem;\n    width: 1rem; }\n  .icon.is-medium {\n    height: 2rem;\n    width: 2rem; }\n  .icon.is-large {\n    height: 3rem;\n    width: 3rem; }\n\n.message {\n  background-color: whitesmoke;\n  border-radius: 4px;\n  font-size: 1rem; }\n  .message strong {\n    color: currentColor; }\n  .message a:not(.button):not(.tag):not(.dropdown-item) {\n    color: currentColor;\n    text-decoration: underline; }\n  .message.is-small {\n    font-size: 0.75rem; }\n  .message.is-medium {\n    font-size: 1.25rem; }\n  .message.is-large {\n    font-size: 1.5rem; }\n  .message.is-white {\n    background-color: white; }\n    .message.is-white .message-header {\n      background-color: white;\n      color: #0a0a0a; }\n    .message.is-white .message-body {\n      border-color: white;\n      color: #4d4d4d; }\n  .message.is-black {\n    background-color: #fafafa; }\n    .message.is-black .message-header {\n      background-color: #0a0a0a;\n      color: white; }\n    .message.is-black .message-body {\n      border-color: #0a0a0a;\n      color: #090909; }\n  .message.is-light {\n    background-color: #fafafa; }\n    .message.is-light .message-header {\n      background-color: whitesmoke;\n      color: #363636; }\n    .message.is-light .message-body {\n      border-color: whitesmoke;\n      color: #505050; }\n  .message.is-dark {\n    background-color: #fafafa; }\n    .message.is-dark .message-header {\n      background-color: #363636;\n      color: whitesmoke; }\n    .message.is-dark .message-body {\n      border-color: #363636;\n      color: #2a2a2a; }\n  .message.is-primary {\n    background-color: #f5fffd; }\n    .message.is-primary .message-header {\n      background-color: #00d1b2;\n      color: #fff; }\n    .message.is-primary .message-body {\n      border-color: #00d1b2;\n      color: #021310; }\n  .message.is-link {\n    background-color: #f6f9fe; }\n    .message.is-link .message-header {\n      background-color: #3273dc;\n      color: #fff; }\n    .message.is-link .message-body {\n      border-color: #3273dc;\n      color: #22509a; }\n  .message.is-info {\n    background-color: #f6fbfe; }\n    .message.is-info .message-header {\n      background-color: #209cee;\n      color: #fff; }\n    .message.is-info .message-body {\n      border-color: #209cee;\n      color: #12537e; }\n  .message.is-success {\n    background-color: #f6fef9; }\n    .message.is-success .message-header {\n      background-color: #23d160;\n      color: #fff; }\n    .message.is-success .message-body {\n      border-color: #23d160;\n      color: #0e301a; }\n  .message.is-warning {\n    background-color: #fffdf5; }\n    .message.is-warning .message-header {\n      background-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7); }\n    .message.is-warning .message-body {\n      border-color: #ffdd57;\n      color: #3b3108; }\n  .message.is-danger {\n    background-color: #fff5f7; }\n    .message.is-danger .message-header {\n      background-color: #ff3860;\n      color: #fff; }\n    .message.is-danger .message-body {\n      border-color: #ff3860;\n      color: #cd0930; }\n\n.message-header {\n  align-items: center;\n  background-color: #4a4a4a;\n  border-radius: 4px 4px 0 0;\n  color: #fff;\n  display: flex;\n  font-weight: 700;\n  justify-content: space-between;\n  line-height: 1.25;\n  padding: 0.75em 1em;\n  position: relative; }\n  .message-header .delete {\n    flex-grow: 0;\n    flex-shrink: 0;\n    margin-left: 0.75em; }\n  .message-header + .message-body {\n    border-width: 0;\n    border-top-left-radius: 0;\n    border-top-right-radius: 0; }\n\n.message-body {\n  border-color: #dbdbdb;\n  border-radius: 4px;\n  border-style: solid;\n  border-width: 0 0 0 4px;\n  color: #4a4a4a;\n  padding: 1.25em 1.5em; }\n  .message-body code,\n  .message-body pre {\n    background-color: white; }\n  .message-body pre code {\n    background-color: transparent; }\n\n.popup {\n  width: 300px;\n  height: 500px;\n  display: flex;\n  flex-direction: column; }\n  .popup .header {\n    flex-grow: 0; }\n    .popup .header .logo {\n      display: flex;\n      width: 100%;\n      flex-direction: column;\n      align-items: center;\n      background-color: black; }\n      .popup .header .logo img {\n        width: 125px;\n        flex-grow: 0; }\n    .popup .header .settings {\n      cursor: pointer;\n      color: white;\n      position: absolute;\n      top: 5px;\n      right: 5px; }\n  .popup .content {\n    padding: 15px;\n    flex-grow: 1; }\n  .popup .footer {\n    flex-grow: 0; }\n", ""]);
+exports.push([module.i, "@keyframes spinAround {\n  from {\n    transform: rotate(0deg); }\n  to {\n    transform: rotate(359deg); } }\n\n.delete {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.block:not(:last-child), .highlight:not(:last-child), .message:not(:last-child) {\n  margin-bottom: 1.5rem; }\n\n.delete {\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  pointer-events: auto;\n  display: inline-block;\n  flex-grow: 0;\n  flex-shrink: 0;\n  font-size: 0;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px; }\n  .delete::before, .delete::after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    transform-origin: center center; }\n  .delete::before {\n    height: 2px;\n    width: 50%; }\n  .delete::after {\n    height: 50%;\n    width: 2px; }\n  .delete:hover, .delete:focus {\n    background-color: rgba(10, 10, 10, 0.3); }\n  .delete:active {\n    background-color: rgba(10, 10, 10, 0.4); }\n  .is-small.delete {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px; }\n  .is-medium.delete {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px; }\n  .is-large.delete {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px; }\n\n.loader {\n  animation: spinAround 500ms infinite linear;\n  border: 2px solid #dbdbdb;\n  border-radius: 290486px;\n  border-right-color: transparent;\n  border-top-color: transparent;\n  content: \"\";\n  display: block;\n  height: 1em;\n  position: relative;\n  width: 1em; }\n\n.heading {\n  display: block;\n  font-size: 11px;\n  letter-spacing: 1px;\n  margin-bottom: 5px;\n  text-transform: uppercase; }\n\n.highlight {\n  font-weight: 400;\n  max-width: 100%;\n  overflow: hidden;\n  padding: 0; }\n  .highlight pre {\n    overflow: auto;\n    max-width: 100%; }\n\n.number {\n  align-items: center;\n  background-color: whitesmoke;\n  border-radius: 290486px;\n  display: inline-flex;\n  font-size: 1.25rem;\n  height: 2em;\n  justify-content: center;\n  margin-right: 1.5rem;\n  min-width: 2.5em;\n  padding: 0.25rem 0.5rem;\n  text-align: center;\n  vertical-align: top; }\n\n.icon {\n  align-items: center;\n  display: inline-flex;\n  justify-content: center;\n  height: 1.5rem;\n  width: 1.5rem; }\n  .icon.is-small {\n    height: 1rem;\n    width: 1rem; }\n  .icon.is-medium {\n    height: 2rem;\n    width: 2rem; }\n  .icon.is-large {\n    height: 3rem;\n    width: 3rem; }\n\n.message {\n  background-color: whitesmoke;\n  border-radius: 4px;\n  font-size: 1rem; }\n  .message strong {\n    color: currentColor; }\n  .message a:not(.button):not(.tag):not(.dropdown-item) {\n    color: currentColor;\n    text-decoration: underline; }\n  .message.is-small {\n    font-size: 0.75rem; }\n  .message.is-medium {\n    font-size: 1.25rem; }\n  .message.is-large {\n    font-size: 1.5rem; }\n  .message.is-white {\n    background-color: white; }\n    .message.is-white .message-header {\n      background-color: white;\n      color: #0a0a0a; }\n    .message.is-white .message-body {\n      border-color: white;\n      color: #4d4d4d; }\n  .message.is-black {\n    background-color: #fafafa; }\n    .message.is-black .message-header {\n      background-color: #0a0a0a;\n      color: white; }\n    .message.is-black .message-body {\n      border-color: #0a0a0a;\n      color: #090909; }\n  .message.is-light {\n    background-color: #fafafa; }\n    .message.is-light .message-header {\n      background-color: whitesmoke;\n      color: #363636; }\n    .message.is-light .message-body {\n      border-color: whitesmoke;\n      color: #505050; }\n  .message.is-dark {\n    background-color: #fafafa; }\n    .message.is-dark .message-header {\n      background-color: #363636;\n      color: whitesmoke; }\n    .message.is-dark .message-body {\n      border-color: #363636;\n      color: #2a2a2a; }\n  .message.is-primary {\n    background-color: #f5fffd; }\n    .message.is-primary .message-header {\n      background-color: #00d1b2;\n      color: #fff; }\n    .message.is-primary .message-body {\n      border-color: #00d1b2;\n      color: #021310; }\n  .message.is-link {\n    background-color: #f6f9fe; }\n    .message.is-link .message-header {\n      background-color: #3273dc;\n      color: #fff; }\n    .message.is-link .message-body {\n      border-color: #3273dc;\n      color: #22509a; }\n  .message.is-info {\n    background-color: #f6fbfe; }\n    .message.is-info .message-header {\n      background-color: #209cee;\n      color: #fff; }\n    .message.is-info .message-body {\n      border-color: #209cee;\n      color: #12537e; }\n  .message.is-success {\n    background-color: #f6fef9; }\n    .message.is-success .message-header {\n      background-color: #23d160;\n      color: #fff; }\n    .message.is-success .message-body {\n      border-color: #23d160;\n      color: #0e301a; }\n  .message.is-warning {\n    background-color: #fffdf5; }\n    .message.is-warning .message-header {\n      background-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7); }\n    .message.is-warning .message-body {\n      border-color: #ffdd57;\n      color: #3b3108; }\n  .message.is-danger {\n    background-color: #fff5f7; }\n    .message.is-danger .message-header {\n      background-color: #ff3860;\n      color: #fff; }\n    .message.is-danger .message-body {\n      border-color: #ff3860;\n      color: #cd0930; }\n\n.message-header {\n  align-items: center;\n  background-color: #4a4a4a;\n  border-radius: 4px 4px 0 0;\n  color: #fff;\n  display: flex;\n  font-weight: 700;\n  justify-content: space-between;\n  line-height: 1.25;\n  padding: 0.75em 1em;\n  position: relative; }\n  .message-header .delete {\n    flex-grow: 0;\n    flex-shrink: 0;\n    margin-left: 0.75em; }\n  .message-header + .message-body {\n    border-width: 0;\n    border-top-left-radius: 0;\n    border-top-right-radius: 0; }\n\n.message-body {\n  border-color: #dbdbdb;\n  border-radius: 4px;\n  border-style: solid;\n  border-width: 0 0 0 4px;\n  color: #4a4a4a;\n  padding: 1.25em 1.5em; }\n  .message-body code,\n  .message-body pre {\n    background-color: white; }\n  .message-body pre code {\n    background-color: transparent; }\n\n.popup {\n  width: 350px;\n  height: 500px;\n  display: flex;\n  flex-direction: column; }\n  .popup .header {\n    flex-grow: 0; }\n    .popup .header .logo {\n      display: flex;\n      width: 100%;\n      flex-direction: column;\n      align-items: center;\n      background-color: #0a0a0a; }\n      .popup .header .logo img {\n        width: 125px;\n        flex-grow: 0; }\n    .popup .header .settings {\n      cursor: pointer;\n      color: white;\n      position: absolute;\n      top: 5px;\n      right: 5px; }\n  .popup .content {\n    overflow-y: auto;\n    flex-grow: 1; }\n    .popup .content.padded {\n      padding: 15px; }\n  .popup .footer {\n    flex-grow: 0; }\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/popup/components/SiteCard/SiteCard.scss":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/lib/loader.js??ref--5-3!./src/popup/components/SiteCard/SiteCard.scss ***!
+  \********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "@keyframes spinAround {\n  from {\n    transform: rotate(0deg); }\n  to {\n    transform: rotate(359deg); } }\n\n.card {\n  background-color: white;\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);\n  color: #4a4a4a;\n  max-width: 100%;\n  position: relative; }\n\n.card-header {\n  background-color: transparent;\n  align-items: stretch;\n  box-shadow: 0 1px 2px rgba(10, 10, 10, 0.1);\n  display: flex; }\n\n.card-header-title {\n  align-items: center;\n  color: #363636;\n  display: flex;\n  flex-grow: 1;\n  font-weight: 700;\n  padding: 0.75rem; }\n  .card-header-title.is-centered {\n    justify-content: center; }\n\n.card-header-icon {\n  align-items: center;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  padding: 0.75rem; }\n\n.card-image {\n  display: block;\n  position: relative; }\n\n.card-content {\n  background-color: transparent;\n  padding: 1.5rem; }\n\n.card-footer {\n  background-color: transparent;\n  border-top: 1px solid #dbdbdb;\n  align-items: stretch;\n  display: flex; }\n\n.card-footer-item {\n  align-items: center;\n  display: flex;\n  flex-basis: 0;\n  flex-grow: 1;\n  flex-shrink: 0;\n  justify-content: center;\n  padding: 0.75rem; }\n  .card-footer-item:not(:last-child) {\n    border-right: 1px solid #dbdbdb; }\n\n.card .media:not(:last-child) {\n  margin-bottom: 0.75rem; }\n\n.icon {\n  align-items: center;\n  display: inline-flex;\n  justify-content: center;\n  height: 1.5rem;\n  width: 1.5rem; }\n  .icon.is-small {\n    height: 1rem;\n    width: 1rem; }\n  .icon.is-medium {\n    height: 2rem;\n    width: 2rem; }\n  .icon.is-large {\n    height: 3rem;\n    width: 3rem; }\n\n.site-card {\n  cursor: pointer; }\n  .site-card .card-footer {\n    border-top: 0px; }\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/popup/components/UserList/UserList.scss":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/lib/loader.js??ref--5-3!./src/popup/components/UserList/UserList.scss ***!
+  \********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, ".user-list .card .header .card-header-title {\n  font-weight: 400 !important;\n  padding-left: 2rem; }\n\n.user-list .card.selected {\n  background-color: #f0f0f0; }\n\n.user-list .card:last-child {\n  box-shadow: 0 0 0 rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1); }\n", ""]);
 
 
 
@@ -8526,10 +8571,133 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/background/actions.ts":
-/*!***********************************!*\
-  !*** ./src/background/actions.ts ***!
-  \***********************************/
+/***/ "./src/background/actions/clipboard.ts":
+/*!*********************************************!*\
+  !*** ./src/background/actions/clipboard.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var _actions_1 = __webpack_require__(/*! @actions */ "./src/background/actions/index.ts");
+exports.copyToClipboard = new _actions_1.Action('copyToClipboard', function (text, cb) {
+    var textarea = document.createElement('textarea');
+    textarea.textContent = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.blur();
+    document.body.removeChild(textarea);
+    cb();
+});
+
+
+/***/ }),
+
+/***/ "./src/background/actions/index.ts":
+/*!*****************************************!*\
+  !*** ./src/background/actions/index.ts ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var vault_1 = __webpack_require__(/*! ../vault */ "./src/background/vault.ts");
+function isError(res) {
+    return res.hasOwnProperty('error');
+}
+exports.isError = isError;
+var Action = /** @class */ (function () {
+    function Action(name, handler) {
+        this.name = name;
+        chrome.runtime.onMessage.addListener(function (msg, _sender, res) {
+            if (msg.action === name) {
+                handler(msg.payload, res);
+            }
+            return true;
+        });
+    }
+    Action.prototype.invoke = function (payload) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        chrome.runtime.sendMessage({ action: _this.name, payload: payload }, function (res) {
+                            if (res && res.hasOwnProperty('error')) {
+                                reject(new Error(res.error));
+                            }
+                            else {
+                                resolve(res);
+                            }
+                        });
+                    })];
+            });
+        });
+    };
+    return Action;
+}());
+exports.Action = Action;
+exports.vault = new vault_1.Vault({
+    host: 'localhost',
+    port: 8200,
+    basePath: 'sites',
+    protocol: 'http'
+});
+chrome.storage.local.get('session', function (res) {
+    if (res && res.session && res.session.token) {
+        exports.vault.loginWithToken(res.session.token);
+    }
+});
+__webpack_require__(/*! ./session */ "./src/background/actions/session.ts");
+__webpack_require__(/*! ./sites */ "./src/background/actions/sites.ts");
+__webpack_require__(/*! ./clipboard */ "./src/background/actions/clipboard.ts");
+
+
+/***/ }),
+
+/***/ "./src/background/actions/session.ts":
+/*!*******************************************!*\
+  !*** ./src/background/actions/session.ts ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8572,54 +8740,14 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
-var vault_1 = __webpack_require__(/*! ./vault */ "./src/background/vault.ts");
-function isError(res) {
-    return res.hasOwnProperty('error');
-}
-exports.isError = isError;
-var Action = /** @class */ (function () {
-    function Action(name, handler) {
-        this.name = name;
-        chrome.runtime.onMessage.addListener(function (msg, _sender, res) {
-            if (msg.action === name) {
-                handler(msg.payload, res);
-            }
-            return true;
-        });
-    }
-    Action.prototype.invoke = function (payload) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, new Promise(function (resolve, reject) {
-                        chrome.runtime.sendMessage({ action: _this.name, payload: payload }, function (res) {
-                            if (res && res.hasOwnProperty('error')) {
-                                reject(new Error(res.error));
-                            }
-                            else {
-                                resolve(res);
-                            }
-                        });
-                    })];
-            });
-        });
-    };
-    return Action;
-}());
-exports.Action = Action;
-var vault = new vault_1.Vault({
-    host: 'localhost',
-    port: 8200,
-    basePath: 'sites',
-    protocol: 'http'
-});
-exports.login = new Action('login', function (payload, cb) { return __awaiter(_this, void 0, void 0, function () {
+var _actions_1 = __webpack_require__(/*! @actions */ "./src/background/actions/index.ts");
+exports.login = new _actions_1.Action('login', function (payload, cb) { return __awaiter(_this, void 0, void 0, function () {
     var token, err_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 2, , 3]);
-                return [4 /*yield*/, vault.loginWithToken(payload.token)];
+                return [4 /*yield*/, _actions_1.vault.loginWithToken(payload.token)];
             case 1:
                 token = _a.sent();
                 return [3 /*break*/, 3];
@@ -8644,7 +8772,7 @@ exports.login = new Action('login', function (payload, cb) { return __awaiter(_t
         }
     });
 }); });
-exports.logout = new Action('logout', function (_payload, cb) { return __awaiter(_this, void 0, void 0, function () {
+exports.logout = new _actions_1.Action('logout', function (_payload, cb) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         chrome.storage.local.remove('session', function () {
             cb();
@@ -8652,7 +8780,7 @@ exports.logout = new Action('logout', function (_payload, cb) { return __awaiter
         return [2 /*return*/];
     });
 }); });
-exports.getSession = new Action('getSession', function (_payload, cb) { return __awaiter(_this, void 0, void 0, function () {
+exports.getSession = new _actions_1.Action('getSession', function (_payload, cb) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         chrome.storage.local.get('session', function (result) {
             if (result && result.session) {
@@ -8663,6 +8791,114 @@ exports.getSession = new Action('getSession', function (_payload, cb) { return _
             }
         });
         return [2 /*return*/];
+    });
+}); });
+
+
+/***/ }),
+
+/***/ "./src/background/actions/sites.ts":
+/*!*****************************************!*\
+  !*** ./src/background/actions/sites.ts ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var _this = this;
+Object.defineProperty(exports, "__esModule", { value: true });
+var _actions_1 = __webpack_require__(/*! @actions */ "./src/background/actions/index.ts");
+exports.getAllSites = new _actions_1.Action('getAllSites', function (_payload, cb) { return __awaiter(_this, void 0, void 0, function () {
+    var response, err_1;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, _actions_1.vault.getChildren()];
+            case 1:
+                response = _a.sent();
+                return [2 /*return*/, cb(response)];
+            case 2:
+                err_1 = _a.sent();
+                return [2 /*return*/, cb({
+                        error: err_1.message
+                    })];
+            case 3: return [2 /*return*/];
+        }
+    });
+}); });
+exports.getUsers = new _actions_1.Action('getUsers', function (site, cb) { return __awaiter(_this, void 0, void 0, function () {
+    var response, err_2;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, _actions_1.vault.getChildren(site)];
+            case 1:
+                response = _a.sent();
+                return [2 /*return*/, cb(response)];
+            case 2:
+                err_2 = _a.sent();
+                return [2 /*return*/, cb({
+                        error: err_2.message
+                    })];
+            case 3: return [2 /*return*/];
+        }
+    });
+}); });
+exports.getUser = new _actions_1.Action('getUser', function (payload, cb) { return __awaiter(_this, void 0, void 0, function () {
+    var response, err_3;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, _actions_1.vault.getSiteUser(payload.url, payload.username)];
+            case 1:
+                response = _a.sent();
+                return [2 /*return*/, cb(response.data)];
+            case 2:
+                err_3 = _a.sent();
+                return [2 /*return*/, cb({
+                        error: err_3.message
+                    })];
+            case 3: return [2 /*return*/];
+        }
     });
 }); });
 
@@ -8718,6 +8954,7 @@ var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 var Vault = /** @class */ (function () {
     function Vault(config) {
         this.config = config;
+        this.headers = {};
     }
     Object.defineProperty(Vault.prototype, "base", {
         get: function () {
@@ -8727,10 +8964,18 @@ var Vault = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(Vault.prototype, "sites", {
+    Object.defineProperty(Vault.prototype, "siteData", {
         get: function () {
             var basePath = this.config.basePath;
             return this.base + "/secret/data/" + basePath;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vault.prototype, "siteMeta", {
+        get: function () {
+            var basePath = this.config.basePath;
+            return this.base + "/secret/metadata/" + basePath;
         },
         enumerable: true,
         configurable: true
@@ -8748,7 +8993,7 @@ var Vault = /** @class */ (function () {
                     case 1:
                         response = _a.sent();
                         if (response.status === 200) {
-                            axios_1.default.defaults = { headers: headers };
+                            this.headers = headers;
                             return [2 /*return*/, token];
                         }
                         else {
@@ -8759,30 +9004,46 @@ var Vault = /** @class */ (function () {
             });
         });
     };
-    Vault.prototype.getSites = function () {
+    Vault.prototype.getChildren = function (root) {
+        if (root === void 0) { root = ''; }
         return __awaiter(this, void 0, void 0, function () {
-            var response;
+            var response, err_1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, axios_1.default.get(this.sites + "/testsite.com/jeremyoverman")];
+                    case 0:
+                        if (root && !root.startsWith('/')) {
+                            root = "/" + root;
+                        }
+                        _a.label = 1;
                     case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, axios_1.default.get("" + this.siteMeta + root + "?list=true", { headers: this.headers })];
+                    case 2:
                         response = _a.sent();
-                        console.log(response);
-                        return [2 /*return*/];
+                        return [2 /*return*/, response.data.data.keys];
+                    case 3:
+                        err_1 = _a.sent();
+                        throw new Error("Error retreiving site list.");
+                    case 4: return [2 /*return*/];
                 }
             });
         });
     };
     Vault.prototype.getSiteUser = function (site, user) {
         return __awaiter(this, void 0, void 0, function () {
-            var response;
+            var response, err_2;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, axios_1.default.get(this.sites + "/" + site + "/" + user)];
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, axios_1.default.get(this.siteData + "/" + site + "/" + user, { headers: this.headers })];
                     case 1:
                         response = _a.sent();
-                        console.log(response);
-                        return [2 /*return*/];
+                        return [2 /*return*/, response.data.data];
+                    case 2:
+                        err_2 = _a.sent();
+                        throw new Error("Error retreiving user.");
+                    case 3: return [2 /*return*/];
                 }
             });
         });
@@ -8790,6 +9051,268 @@ var Vault = /** @class */ (function () {
     return Vault;
 }());
 exports.Vault = Vault;
+
+
+/***/ }),
+
+/***/ "./src/models/site.ts":
+/*!****************************!*\
+  !*** ./src/models/site.ts ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var mobx_1 = __webpack_require__(/*! mobx */ "./node_modules/mobx/lib/mobx.module.js");
+var sites_1 = __webpack_require__(/*! @actions/sites */ "./src/background/actions/sites.ts");
+var _stores_1 = __webpack_require__(/*! @stores */ "./src/popup/stores/index.ts");
+var user_1 = __webpack_require__(/*! ./user */ "./src/models/user.ts");
+var Site = /** @class */ (function () {
+    function Site(url) {
+        var _this = this;
+        this.url = url;
+        this.username = '';
+        this.password = '';
+        this.users = [];
+        this.isUsersShowing = false;
+        this.deselectUsers = function () {
+            _this.users.forEach(function (user) { return user.deselect(); });
+        };
+        this.toggleUsers = function () { return __awaiter(_this, void 0, void 0, function () {
+            var usernames_1, err_1;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!this.isUsersShowing) return [3 /*break*/, 1];
+                        this.isUsersShowing = false;
+                        return [3 /*break*/, 4];
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, sites_1.getUsers.invoke(this.url)];
+                    case 2:
+                        usernames_1 = _a.sent();
+                        mobx_1.runInAction(function () {
+                            _this.users = usernames_1.map(function (username) { return new user_1.User(username, _this); });
+                            _this.isUsersShowing = !_this.isUsersShowing;
+                        });
+                        return [3 /*break*/, 4];
+                    case 3:
+                        err_1 = _a.sent();
+                        mobx_1.runInAction(function () {
+                            _stores_1.stores.userInterface.error = err_1;
+                        });
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        }); };
+    }
+    Object.defineProperty(Site.prototype, "selectedUser", {
+        get: function () {
+            var user = this.users.find(function (user) { return user.isSelected; });
+            if (!user && this.users.length) {
+                this.users[0].select();
+                user = this.users[0];
+            }
+            return user;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    __decorate([
+        mobx_1.observable
+    ], Site.prototype, "username", void 0);
+    __decorate([
+        mobx_1.observable
+    ], Site.prototype, "password", void 0);
+    __decorate([
+        mobx_1.observable
+    ], Site.prototype, "users", void 0);
+    __decorate([
+        mobx_1.computed
+    ], Site.prototype, "selectedUser", null);
+    __decorate([
+        mobx_1.observable
+    ], Site.prototype, "isUsersShowing", void 0);
+    __decorate([
+        mobx_1.action
+    ], Site.prototype, "deselectUsers", void 0);
+    __decorate([
+        mobx_1.action
+    ], Site.prototype, "toggleUsers", void 0);
+    return Site;
+}());
+exports.Site = Site;
+
+
+/***/ }),
+
+/***/ "./src/models/user.ts":
+/*!****************************!*\
+  !*** ./src/models/user.ts ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var mobx_1 = __webpack_require__(/*! mobx */ "./node_modules/mobx/lib/mobx.module.js");
+var sites_1 = __webpack_require__(/*! @actions/sites */ "./src/background/actions/sites.ts");
+var _stores_1 = __webpack_require__(/*! @stores */ "./src/popup/stores/index.ts");
+var clipboard_1 = __webpack_require__(/*! @actions/clipboard */ "./src/background/actions/clipboard.ts");
+var User = /** @class */ (function () {
+    function User(username, site) {
+        var _this = this;
+        this.username = username;
+        this.site = site;
+        this.password = '';
+        this.isSelected = false;
+        this.deselect = function () {
+            _this.isSelected = false;
+        };
+        this.select = function () { return __awaiter(_this, void 0, void 0, function () {
+            var response_1, err_1;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, sites_1.getUser.invoke({
+                                url: this.site.url,
+                                username: this.username
+                            })];
+                    case 1:
+                        response_1 = _a.sent();
+                        mobx_1.runInAction(function () {
+                            _this.site.deselectUsers();
+                            _this.isSelected = true;
+                            _this.password = response_1.password;
+                        });
+                        return [3 /*break*/, 3];
+                    case 2:
+                        err_1 = _a.sent();
+                        mobx_1.runInAction(function () {
+                            _stores_1.stores.userInterface.error = err_1;
+                        });
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        }); };
+        this.copyUsername = function () {
+            clipboard_1.copyToClipboard.invoke(_this.username);
+        };
+        this.copyPassword = function () {
+            clipboard_1.copyToClipboard.invoke(_this.password);
+        };
+    }
+    __decorate([
+        mobx_1.observable
+    ], User.prototype, "password", void 0);
+    __decorate([
+        mobx_1.observable
+    ], User.prototype, "isSelected", void 0);
+    __decorate([
+        mobx_1.action
+    ], User.prototype, "deselect", void 0);
+    __decorate([
+        mobx_1.action
+    ], User.prototype, "select", void 0);
+    __decorate([
+        mobx_1.action
+    ], User.prototype, "copyUsername", void 0);
+    __decorate([
+        mobx_1.action
+    ], User.prototype, "copyPassword", void 0);
+    return User;
+}());
+exports.User = User;
 
 
 /***/ }),
@@ -9156,6 +9679,36 @@ exports.LoginPanel = LoginPanel;
 
 /***/ }),
 
+/***/ "./src/popup/components/MainPanel/MainPanel.scss":
+/*!*******************************************************!*\
+  !*** ./src/popup/components/MainPanel/MainPanel.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/resolve-url-loader!../../../../node_modules/sass-loader/lib/loader.js??ref--5-3!./MainPanel.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/popup/components/MainPanel/MainPanel.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./src/popup/components/MainPanel/MainPanel.tsx":
 /*!******************************************************!*\
   !*** ./src/popup/components/MainPanel/MainPanel.tsx ***!
@@ -9178,20 +9731,39 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var preact_1 = __webpack_require__(/*! preact */ "./node_modules/preact/dist/preact.mjs");
 var _stores_1 = __webpack_require__(/*! @stores */ "./src/popup/stores/index.ts");
 var Panel_1 = __webpack_require__(/*! @components/Panel/Panel */ "./src/popup/components/Panel/Panel.tsx");
+var mobx_preact_1 = __webpack_require__(/*! mobx-preact */ "./node_modules/mobx-preact/lib/index.module.js");
+__webpack_require__(/*! ./MainPanel.scss */ "./src/popup/components/MainPanel/MainPanel.scss");
+var SiteCard_1 = __webpack_require__(/*! @components/SiteCard/SiteCard */ "./src/popup/components/SiteCard/SiteCard.tsx");
 var MainPanel = /** @class */ (function (_super) {
     __extends(MainPanel, _super);
     function MainPanel() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.componentDidMount = function () {
+            _this.cprops.sites.getSites();
+        };
+        return _this;
     }
     MainPanel.prototype.render = function () {
+        var sites = this.cprops.sites;
+        var siteList = sites.sites.map(function (site) {
+            return preact_1.h(SiteCard_1.SiteCard, { site: site });
+        });
         return (preact_1.h(Panel_1.Panel, null,
-            preact_1.h(Panel_1.Panel.Content, null,
-                preact_1.h("h1", null, "Login success!"))));
+            preact_1.h(Panel_1.Panel.Content, { padded: false }, siteList)));
     };
+    MainPanel = __decorate([
+        mobx_preact_1.inject(['sites']), mobx_preact_1.observer
+    ], MainPanel);
     return MainPanel;
 }(_stores_1.InjectedComponent));
 exports.MainPanel = MainPanel;
@@ -9323,7 +9895,7 @@ var PanelContent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     PanelContent.prototype.render = function () {
-        return preact_1.h("div", { className: "content" }, this.props.children);
+        return preact_1.h("div", { className: "content " + (this.props.padded !== false ? 'padded' : '') }, this.props.children);
     };
     return PanelContent;
 }(preact_1.Component));
@@ -9370,6 +9942,190 @@ var Panel = /** @class */ (function (_super) {
     return Panel;
 }(_stores_1.InjectedComponent));
 exports.Panel = Panel;
+
+
+/***/ }),
+
+/***/ "./src/popup/components/SiteCard/SiteCard.scss":
+/*!*****************************************************!*\
+  !*** ./src/popup/components/SiteCard/SiteCard.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/resolve-url-loader!../../../../node_modules/sass-loader/lib/loader.js??ref--5-3!./SiteCard.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/popup/components/SiteCard/SiteCard.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/popup/components/SiteCard/SiteCard.tsx":
+/*!****************************************************!*\
+  !*** ./src/popup/components/SiteCard/SiteCard.tsx ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var preact_1 = __webpack_require__(/*! preact */ "./node_modules/preact/dist/preact.mjs");
+var _stores_1 = __webpack_require__(/*! @stores */ "./src/popup/stores/index.ts");
+var mobx_preact_1 = __webpack_require__(/*! mobx-preact */ "./node_modules/mobx-preact/lib/index.module.js");
+var UserList_1 = __webpack_require__(/*! @components/UserList/UserList */ "./src/popup/components/UserList/UserList.tsx");
+__webpack_require__(/*! ./SiteCard.scss */ "./src/popup/components/SiteCard/SiteCard.scss");
+var SiteCard = /** @class */ (function (_super) {
+    __extends(SiteCard, _super);
+    function SiteCard() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    SiteCard.prototype.render = function () {
+        var site = this.cprops.site;
+        var content;
+        if (site.isUsersShowing) {
+            content = (preact_1.h("div", null,
+                preact_1.h("div", { className: "card-content is-paddingless" }, site.isUsersShowing ? preact_1.h(UserList_1.UserList, { users: site.users }) : ''),
+                site.selectedUser ? (preact_1.h("footer", { class: "card-footer" },
+                    preact_1.h("a", { href: "#", class: "card-footer-item", onClick: site.selectedUser.copyUsername }, "User"),
+                    preact_1.h("a", { href: "#", class: "card-footer-item", onClick: site.selectedUser.copyPassword }, "Password"),
+                    preact_1.h("a", { href: "#", class: "card-footer-item" }, "Edit"))) : ''));
+        }
+        return (preact_1.h("div", { className: "card site-card" },
+            preact_1.h("header", { className: "card-header", onClick: site.toggleUsers },
+                preact_1.h("p", { className: "card-header-title" }, site.url),
+                site.isUsersShowing ? (preact_1.h("a", { href: "#", class: "card-header-icon" },
+                    preact_1.h("span", { class: "icon" },
+                        preact_1.h("i", { class: "fas fa-angle-down", "aria-hidden": "true" })))) : ''),
+            content));
+    };
+    SiteCard = __decorate([
+        mobx_preact_1.observer
+    ], SiteCard);
+    return SiteCard;
+}(_stores_1.InjectedComponent));
+exports.SiteCard = SiteCard;
+
+
+/***/ }),
+
+/***/ "./src/popup/components/UserList/UserList.scss":
+/*!*****************************************************!*\
+  !*** ./src/popup/components/UserList/UserList.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/resolve-url-loader!../../../../node_modules/sass-loader/lib/loader.js??ref--5-3!./UserList.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/popup/components/UserList/UserList.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/popup/components/UserList/UserList.tsx":
+/*!****************************************************!*\
+  !*** ./src/popup/components/UserList/UserList.tsx ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var preact_1 = __webpack_require__(/*! preact */ "./node_modules/preact/dist/preact.mjs");
+var _stores_1 = __webpack_require__(/*! @stores */ "./src/popup/stores/index.ts");
+var mobx_preact_1 = __webpack_require__(/*! mobx-preact */ "./node_modules/mobx-preact/lib/index.module.js");
+__webpack_require__(/*! ./UserList.scss */ "./src/popup/components/UserList/UserList.scss");
+var UserList = /** @class */ (function (_super) {
+    __extends(UserList, _super);
+    function UserList() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    UserList.prototype.render = function () {
+        var userList = this.cprops.users.map(function (user) {
+            return (preact_1.h("div", { className: "card " + (user.isSelected ? 'selected' : '') },
+                preact_1.h("div", { className: "header", onClick: user.select },
+                    preact_1.h("div", { className: "card-header-title" }, user.username))));
+        });
+        return (preact_1.h("div", { className: "user-list" }, userList));
+    };
+    UserList = __decorate([
+        mobx_preact_1.observer
+    ], UserList);
+    return UserList;
+}(_stores_1.InjectedComponent));
+exports.UserList = UserList;
 
 
 /***/ }),
@@ -9508,9 +10264,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var session_1 = __webpack_require__(/*! ./session */ "./src/popup/stores/session.ts");
 var preact_1 = __webpack_require__(/*! preact */ "./node_modules/preact/dist/preact.mjs");
 var interface_1 = __webpack_require__(/*! ./interface */ "./src/popup/stores/interface.ts");
+var sites_1 = __webpack_require__(/*! ./sites */ "./src/popup/stores/sites.ts");
 exports.stores = {
     session: new session_1.SessionStore(),
-    userInterface: new interface_1.UserInterfaceStore()
+    userInterface: new interface_1.UserInterfaceStore(),
+    sites: new sites_1.SitesStore()
 };
 var InjectedComponent = /** @class */ (function (_super) {
     __extends(InjectedComponent, _super);
@@ -9645,7 +10403,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var mobx_1 = __webpack_require__(/*! mobx */ "./node_modules/mobx/lib/mobx.module.js");
-var _actions_1 = __webpack_require__(/*! @actions */ "./src/background/actions.ts");
+var session_1 = __webpack_require__(/*! @actions/session */ "./src/background/actions/session.ts");
 var _stores_1 = __webpack_require__(/*! @stores */ "./src/popup/stores/index.ts");
 var SessionStore = /** @class */ (function () {
     function SessionStore() {
@@ -9657,21 +10415,25 @@ var SessionStore = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, _actions_1.login.invoke({ token: token })];
+                        console.log('login');
+                        _a.label = 1;
                     case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, session_1.login.invoke({ token: token })];
+                    case 2:
                         response_1 = _a.sent();
+                        console.log(response_1);
                         mobx_1.runInAction(function () {
                             _this.token = response_1;
                         });
-                        return [3 /*break*/, 3];
-                    case 2:
+                        return [3 /*break*/, 4];
+                    case 3:
                         err_1 = _a.sent();
                         mobx_1.runInAction(function () {
                             _stores_1.stores.userInterface.error = err_1;
                         });
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/];
                 }
             });
         }); };
@@ -9679,11 +10441,10 @@ var SessionStore = /** @class */ (function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, _actions_1.logout.invoke()];
+                    case 0: return [4 /*yield*/, session_1.logout.invoke()];
                     case 1:
                         _a.sent();
                         mobx_1.runInAction(function () {
-                            console.log('log out');
                             _this.token = '';
                             _stores_1.stores.userInterface.closeOptions();
                         });
@@ -9692,18 +10453,18 @@ var SessionStore = /** @class */ (function () {
             });
         }); };
         this.update = function () { return __awaiter(_this, void 0, void 0, function () {
-            var session_1, err_2;
+            var session_2, err_2;
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, _actions_1.getSession.invoke()];
+                        return [4 /*yield*/, session_1.getSession.invoke()];
                     case 1:
-                        session_1 = _a.sent();
+                        session_2 = _a.sent();
                         mobx_1.runInAction(function () {
-                            if (session_1) {
-                                _this.token = session_1.token;
+                            if (session_2) {
+                                _this.token = session_2.token;
                             }
                         });
                         return [3 /*break*/, 3];
@@ -9743,6 +10504,101 @@ var SessionStore = /** @class */ (function () {
     return SessionStore;
 }());
 exports.SessionStore = SessionStore;
+
+
+/***/ }),
+
+/***/ "./src/popup/stores/sites.ts":
+/*!***********************************!*\
+  !*** ./src/popup/stores/sites.ts ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var site_1 = __webpack_require__(/*! @models/site */ "./src/models/site.ts");
+var mobx_1 = __webpack_require__(/*! mobx */ "./node_modules/mobx/lib/mobx.module.js");
+var sites_1 = __webpack_require__(/*! @actions/sites */ "./src/background/actions/sites.ts");
+var SitesStore = /** @class */ (function () {
+    function SitesStore() {
+        var _this = this;
+        this.sites = [];
+        this.getSites = function () { return __awaiter(_this, void 0, void 0, function () {
+            var response;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, sites_1.getAllSites.invoke()];
+                    case 1:
+                        response = _a.sent();
+                        mobx_1.runInAction(function () {
+                            _this.sites = response.map(function (url) {
+                                return new site_1.Site(url);
+                            });
+                        });
+                        return [2 /*return*/];
+                }
+            });
+        }); };
+        this.showUsers = function (site) {
+            site.isUsersShowing = true;
+        };
+    }
+    __decorate([
+        mobx_1.observable
+    ], SitesStore.prototype, "sites", void 0);
+    __decorate([
+        mobx_1.action
+    ], SitesStore.prototype, "getSites", void 0);
+    __decorate([
+        mobx_1.action
+    ], SitesStore.prototype, "showUsers", void 0);
+    return SitesStore;
+}());
+exports.SitesStore = SitesStore;
 
 
 /***/ })
