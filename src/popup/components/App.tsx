@@ -7,6 +7,7 @@ import { InjectedComponent } from '@stores';
 import { MainPanel } from './MainPanel/MainPanel';
 import { UserInterfaceStore } from '@stores/interface';
 import { OptionsPanel } from './OptionsPanel/OptionsPanel';
+import { EditSitePanel } from './EditSitePanel/EditSitePanel';
 
 interface IProps { }
 
@@ -23,10 +24,16 @@ export class App extends InjectedComponent<IProps, IInjectedProps, {}> {
     let { session, userInterface } = this.cprops;
     let panel;
 
-    if (userInterface.isOptionsOpen) {
+    if (!session.token && userInterface.panel !== 'options') {
+      userInterface.goto('login')
+    }
+
+    if (userInterface.panel === 'options') {
       panel = <OptionsPanel />
-    } else if (session.token) {
+    } else if (userInterface.panel === 'main') {
       panel = <MainPanel />
+    } else if (userInterface.panel === 'edit_site') {
+      panel = <EditSitePanel />
     } else {
       panel = <LoginPanel />
     }

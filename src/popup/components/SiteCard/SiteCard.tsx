@@ -27,7 +27,7 @@ export class SiteCard extends InjectedComponent<Props> {
               <footer class="card-footer">
                 <a href="#" class="card-footer-item" onClick={site.selectedUser.copyUsername}>User</a>
                 <a href="#" class="card-footer-item" onClick={site.selectedUser.copyPassword}>Password</a>
-                <a href="#" class="card-footer-item">Edit</a>
+                <a href="#" class="card-footer-item" onClick={site.edit}>Edit</a>
               </footer>
             ) : ''}
         </div>

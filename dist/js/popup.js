@@ -1784,6 +1784,21 @@ exports.push([module.i, "@keyframes spinAround {\n  from {\n    transform: rotat
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/popup/components/Form/Select/Select.scss":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/lib/loader.js??ref--5-3!./src/popup/components/Form/Select/Select.scss ***!
+  \*********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, ".select, .select-control, .input-control, input, select {\n  width: 100%; }\n", ""]);
+
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/popup/components/LoginPanel/LoginPanel.scss":
 /*!************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/lib/loader.js??ref--5-3!./src/popup/components/LoginPanel/LoginPanel.scss ***!
@@ -9114,10 +9129,13 @@ var Site = /** @class */ (function () {
     function Site(url) {
         var _this = this;
         this.url = url;
-        this.username = '';
-        this.password = '';
         this.users = [];
         this.isUsersShowing = false;
+        this.isEditing = false;
+        this.edit = function () {
+            _this.isEditing = true;
+            _stores_1.stores.userInterface.goto('edit_site');
+        };
         this.deselectUsers = function () {
             _this.users.forEach(function (user) { return user.deselect(); });
         };
@@ -9165,12 +9183,6 @@ var Site = /** @class */ (function () {
     });
     __decorate([
         mobx_1.observable
-    ], Site.prototype, "username", void 0);
-    __decorate([
-        mobx_1.observable
-    ], Site.prototype, "password", void 0);
-    __decorate([
-        mobx_1.observable
     ], Site.prototype, "users", void 0);
     __decorate([
         mobx_1.computed
@@ -9178,6 +9190,12 @@ var Site = /** @class */ (function () {
     __decorate([
         mobx_1.observable
     ], Site.prototype, "isUsersShowing", void 0);
+    __decorate([
+        mobx_1.observable
+    ], Site.prototype, "isEditing", void 0);
+    __decorate([
+        mobx_1.action
+    ], Site.prototype, "edit", void 0);
     __decorate([
         mobx_1.action
     ], Site.prototype, "deselectUsers", void 0);
@@ -9249,8 +9267,7 @@ var clipboard_1 = __webpack_require__(/*! @actions/clipboard */ "./src/backgroun
 var User = /** @class */ (function () {
     function User(username, site) {
         var _this = this;
-        this.username = username;
-        this.site = site;
+        this.username = '';
         this.password = '';
         this.isSelected = false;
         this.deselect = function () {
@@ -9291,7 +9308,15 @@ var User = /** @class */ (function () {
         this.copyPassword = function () {
             clipboard_1.copyToClipboard.invoke(_this.password);
         };
+        this.site = site;
+        this.username = username;
     }
+    __decorate([
+        mobx_1.observable
+    ], User.prototype, "site", void 0);
+    __decorate([
+        mobx_1.observable
+    ], User.prototype, "username", void 0);
     __decorate([
         mobx_1.observable
     ], User.prototype, "password", void 0);
@@ -9352,6 +9377,7 @@ var LoginPanel_1 = __webpack_require__(/*! @components/LoginPanel/LoginPanel */ 
 var _stores_1 = __webpack_require__(/*! @stores */ "./src/popup/stores/index.ts");
 var MainPanel_1 = __webpack_require__(/*! ./MainPanel/MainPanel */ "./src/popup/components/MainPanel/MainPanel.tsx");
 var OptionsPanel_1 = __webpack_require__(/*! ./OptionsPanel/OptionsPanel */ "./src/popup/components/OptionsPanel/OptionsPanel.tsx");
+var EditSitePanel_1 = __webpack_require__(/*! ./EditSitePanel/EditSitePanel */ "./src/popup/components/EditSitePanel/EditSitePanel.tsx");
 var App = /** @class */ (function (_super) {
     __extends(App, _super);
     function App() {
@@ -9360,11 +9386,17 @@ var App = /** @class */ (function (_super) {
     App.prototype.render = function () {
         var _a = this.cprops, session = _a.session, userInterface = _a.userInterface;
         var panel;
-        if (userInterface.isOptionsOpen) {
+        if (!session.token && userInterface.panel !== 'options') {
+            userInterface.goto('login');
+        }
+        if (userInterface.panel === 'options') {
             panel = preact_1.h(OptionsPanel_1.OptionsPanel, null);
         }
-        else if (session.token) {
+        else if (userInterface.panel === 'main') {
             panel = preact_1.h(MainPanel_1.MainPanel, null);
+        }
+        else if (userInterface.panel === 'edit_site') {
+            panel = preact_1.h(EditSitePanel_1.EditSitePanel, null);
         }
         else {
             panel = preact_1.h(LoginPanel_1.LoginPanel, null);
@@ -9379,6 +9411,68 @@ var App = /** @class */ (function (_super) {
     return App;
 }(_stores_1.InjectedComponent));
 exports.App = App;
+
+
+/***/ }),
+
+/***/ "./src/popup/components/EditSitePanel/EditSitePanel.tsx":
+/*!**************************************************************!*\
+  !*** ./src/popup/components/EditSitePanel/EditSitePanel.tsx ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var preact_1 = __webpack_require__(/*! preact */ "./node_modules/preact/dist/preact.mjs");
+var _stores_1 = __webpack_require__(/*! @stores */ "./src/popup/stores/index.ts");
+var Panel_1 = __webpack_require__(/*! @components/Panel/Panel */ "./src/popup/components/Panel/Panel.tsx");
+var SiteForm_1 = __webpack_require__(/*! @components/SiteForm/SiteForm */ "./src/popup/components/SiteForm/SiteForm.tsx");
+var mobx_preact_1 = __webpack_require__(/*! mobx-preact */ "./node_modules/mobx-preact/lib/index.module.js");
+var Button_1 = __webpack_require__(/*! @components/Form/Button/Button */ "./src/popup/components/Form/Button/Button.tsx");
+var EditSitePanel = /** @class */ (function (_super) {
+    __extends(EditSitePanel, _super);
+    function EditSitePanel() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.showSite = function () {
+            console.log(_this.cprops.sites.editingSite, _this.cprops.sites.editingSite.selectedUser);
+        };
+        return _this;
+    }
+    EditSitePanel.prototype.render = function () {
+        var sites = this.cprops.sites;
+        return (preact_1.h(Panel_1.Panel, null,
+            preact_1.h(Panel_1.Panel.Content, null,
+                preact_1.h(SiteForm_1.SiteForm, { site: sites.editingSite })),
+            preact_1.h(Panel_1.Panel.Footer, null,
+                preact_1.h(Button_1.Button, { color: "black", wide: true, content: "Save", onClick: this.showSite }))));
+    };
+    EditSitePanel = __decorate([
+        mobx_preact_1.inject(['sites']), mobx_preact_1.observer
+    ], EditSitePanel);
+    return EditSitePanel;
+}(_stores_1.InjectedComponent));
+exports.EditSitePanel = EditSitePanel;
 
 
 /***/ }),
@@ -9478,6 +9572,51 @@ exports.Button = Button;
 
 /***/ }),
 
+/***/ "./src/popup/components/Form/Form.tsx":
+/*!********************************************!*\
+  !*** ./src/popup/components/Form/Form.tsx ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var preact_1 = __webpack_require__(/*! preact */ "./node_modules/preact/dist/preact.mjs");
+var FormInput_1 = __webpack_require__(/*! ./Input/FormInput */ "./src/popup/components/Form/Input/FormInput.tsx");
+var Button_1 = __webpack_require__(/*! ./Button/Button */ "./src/popup/components/Form/Button/Button.tsx");
+var Select_1 = __webpack_require__(/*! ./Select/Select */ "./src/popup/components/Form/Select/Select.tsx");
+var Form = /** @class */ (function (_super) {
+    __extends(Form, _super);
+    function Form() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Form.prototype.render = function () {
+        return preact_1.h("form", null, this.props.children);
+    };
+    Form.Input = FormInput_1.FormInput;
+    Form.Button = Button_1.Button;
+    Form.Select = Select_1.Select;
+    return Form;
+}(preact_1.Component));
+exports.Form = Form;
+
+
+/***/ }),
+
 /***/ "./src/popup/components/Form/Input/FormInput.scss":
 /*!********************************************************!*\
   !*** ./src/popup/components/Form/Input/FormInput.scss ***!
@@ -9568,6 +9707,124 @@ var FormInput = /** @class */ (function (_super) {
     return FormInput;
 }(preact_1.Component));
 exports.FormInput = FormInput;
+
+
+/***/ }),
+
+/***/ "./src/popup/components/Form/Select/Select.scss":
+/*!******************************************************!*\
+  !*** ./src/popup/components/Form/Select/Select.scss ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js!../../../../../node_modules/resolve-url-loader!../../../../../node_modules/sass-loader/lib/loader.js??ref--5-3!./Select.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/popup/components/Form/Select/Select.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/popup/components/Form/Select/Select.tsx":
+/*!*****************************************************!*\
+  !*** ./src/popup/components/Form/Select/Select.tsx ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var preact_1 = __webpack_require__(/*! preact */ "./node_modules/preact/dist/preact.mjs");
+__webpack_require__(/*! ./Select.scss */ "./src/popup/components/Form/Select/Select.scss");
+var Select = /** @class */ (function (_super) {
+    __extends(Select, _super);
+    function Select() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.edit = function () { return _this.setState({ isEditing: true }); };
+        _this.cancel = function () {
+            _this.setState({ isEditing: false }, function () {
+                if (_this.props.onCancel) {
+                    _this.props.onCancel();
+                }
+            });
+        };
+        return _this;
+    }
+    Select.prototype.render = function () {
+        var _this = this;
+        var _a = this.props, options = _a.options, label = _a.label, editable = _a.editable, rest = __rest(_a, ["options", "label", "editable"]);
+        var isEditing = this.state.isEditing;
+        var input;
+        if (isEditing) {
+            input = (preact_1.h("div", { className: "control input-control" },
+                preact_1.h("input", { ref: function (inputEl) { return _this.inputEl = inputEl; }, className: "input", value: this.props.value, onChange: this.props.onChange })));
+        }
+        else {
+            input = (preact_1.h("div", { className: "control select-control" },
+                preact_1.h("div", { className: "select" },
+                    preact_1.h("select", __assign({}, rest), options.map(function (option) { return (preact_1.h("option", { value: option.value }, option.display !== undefined ? option.display : option.value)); })))));
+        }
+        return (preact_1.h("div", { className: "field" },
+            preact_1.h("label", { className: "label" }, label),
+            preact_1.h("div", { className: "field has-addons" },
+                input,
+                preact_1.h("div", { className: "control edit-control" }, isEditing
+                    ? preact_1.h("div", { className: "button", onClick: this.cancel }, "Cancel")
+                    : preact_1.h("div", { className: "button", onClick: this.edit }, "Edit")))));
+    };
+    return Select;
+}(preact_1.Component));
+exports.Select = Select;
 
 
 /***/ }),
@@ -10024,7 +10281,7 @@ var SiteCard = /** @class */ (function (_super) {
                 site.selectedUser ? (preact_1.h("footer", { class: "card-footer" },
                     preact_1.h("a", { href: "#", class: "card-footer-item", onClick: site.selectedUser.copyUsername }, "User"),
                     preact_1.h("a", { href: "#", class: "card-footer-item", onClick: site.selectedUser.copyPassword }, "Password"),
-                    preact_1.h("a", { href: "#", class: "card-footer-item" }, "Edit"))) : ''));
+                    preact_1.h("a", { href: "#", class: "card-footer-item", onClick: site.edit }, "Edit"))) : ''));
         }
         return (preact_1.h("div", { className: "card site-card" },
             preact_1.h("header", { className: "card-header", onClick: site.toggleUsers },
@@ -10040,6 +10297,91 @@ var SiteCard = /** @class */ (function (_super) {
     return SiteCard;
 }(_stores_1.InjectedComponent));
 exports.SiteCard = SiteCard;
+
+
+/***/ }),
+
+/***/ "./src/popup/components/SiteForm/SiteForm.tsx":
+/*!****************************************************!*\
+  !*** ./src/popup/components/SiteForm/SiteForm.tsx ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var preact_1 = __webpack_require__(/*! preact */ "./node_modules/preact/dist/preact.mjs");
+var _stores_1 = __webpack_require__(/*! @stores */ "./src/popup/stores/index.ts");
+var site_1 = __webpack_require__(/*! @models/site */ "./src/models/site.ts");
+var Form_1 = __webpack_require__(/*! @components/Form/Form */ "./src/popup/components/Form/Form.tsx");
+var mobx_preact_1 = __webpack_require__(/*! mobx-preact */ "./node_modules/mobx-preact/lib/index.module.js");
+var SiteForm = /** @class */ (function (_super) {
+    __extends(SiteForm, _super);
+    function SiteForm(props) {
+        var _this = _super.call(this, props) || this;
+        _this.onUserChange = function (evt) {
+            var target = evt.target;
+            var user = _this.site.users.find(function (user) { return user.username === target.value; });
+            console.log(target.value);
+            if (user) {
+                user.select();
+                _this.setState({ originalUsername: user.username });
+            }
+            else {
+                if (_this.site.selectedUser) {
+                    _this.site.selectedUser.username = target.value;
+                }
+            }
+        };
+        _this.onUserChangeCancel = function () {
+            if (_this.site.selectedUser) {
+                _this.site.selectedUser.username = _this.state.originalUsername;
+                _this.site.selectedUser.select();
+            }
+        };
+        if (props.site) {
+            _this.site = props.site;
+        }
+        else {
+            _this.site = new site_1.Site('');
+        }
+        _this.state = {
+            originalUsername: _this.site.selectedUser ? _this.site.selectedUser.username : ''
+        };
+        return _this;
+    }
+    SiteForm.prototype.render = function () {
+        var userOptions = this.site.users.map(function (user) { return ({ value: user.username }); });
+        return (preact_1.h(Form_1.Form, null,
+            preact_1.h(Form_1.Form.Input, { label: "Site", value: this.site.url }),
+            preact_1.h(Form_1.Form.Select, { label: "Username", editable: true, options: userOptions, value: this.site.selectedUser.username, onChange: this.onUserChange, onCancel: this.onUserChangeCancel })));
+    };
+    SiteForm = __decorate([
+        mobx_preact_1.observer
+    ], SiteForm);
+    return SiteForm;
+}(_stores_1.InjectedComponent));
+exports.SiteForm = SiteForm;
 
 
 /***/ }),
@@ -10225,13 +10567,17 @@ var _stores_1 = __webpack_require__(/*! @stores */ "./src/popup/stores/index.ts"
 window.onload = function () { return __awaiter(_this, void 0, void 0, function () {
     var root;
     return __generator(this, function (_a) {
-        _stores_1.stores.session.update();
-        root = document.getElementById('root');
-        if (root) {
-            preact_1.render(preact_1.h(mobx_preact_1.Provider, __assign({}, _stores_1.stores),
-                preact_1.h(App_1.App, null)), root);
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, _stores_1.stores.session.update()];
+            case 1:
+                _a.sent();
+                root = document.getElementById('root');
+                if (root) {
+                    preact_1.render(preact_1.h(mobx_preact_1.Provider, __assign({}, _stores_1.stores),
+                        preact_1.h(App_1.App, null)), root);
+                }
+                return [2 /*return*/];
         }
-        return [2 /*return*/];
     });
 }); };
 
@@ -10309,20 +10655,26 @@ var mobx_1 = __webpack_require__(/*! mobx */ "./node_modules/mobx/lib/mobx.modul
 var UserInterfaceStore = /** @class */ (function () {
     function UserInterfaceStore() {
         var _this = this;
+        this.last_panel = 'main';
         this.error = null;
-        this.isOptionsOpen = false;
+        this.panel = 'main';
+        this.goto = function (panel) {
+            _this.last_panel = "" + _this.panel;
+            _this.panel = panel;
+        };
         this.closeError = function () {
             _this.error = null;
         };
-        this.openOptions = function () {
-            _this.isOptionsOpen = true;
-        };
-        this.closeOptions = function () {
-            _this.isOptionsOpen = false;
+        this.back = function () {
+            _this.goto(_this.last_panel);
         };
         this.toggleOptions = function () {
-            console.log(_this);
-            _this.isOptionsOpen = !_this.isOptionsOpen;
+            if (_this.panel === 'options') {
+                _this.back();
+            }
+            else {
+                _this.goto('options');
+            }
         };
     }
     __decorate([
@@ -10330,16 +10682,16 @@ var UserInterfaceStore = /** @class */ (function () {
     ], UserInterfaceStore.prototype, "error", void 0);
     __decorate([
         mobx_1.observable
-    ], UserInterfaceStore.prototype, "isOptionsOpen", void 0);
+    ], UserInterfaceStore.prototype, "panel", void 0);
+    __decorate([
+        mobx_1.action
+    ], UserInterfaceStore.prototype, "goto", void 0);
     __decorate([
         mobx_1.action
     ], UserInterfaceStore.prototype, "closeError", void 0);
     __decorate([
         mobx_1.action
-    ], UserInterfaceStore.prototype, "openOptions", void 0);
-    __decorate([
-        mobx_1.action
-    ], UserInterfaceStore.prototype, "closeOptions", void 0);
+    ], UserInterfaceStore.prototype, "back", void 0);
     __decorate([
         mobx_1.action
     ], UserInterfaceStore.prototype, "toggleOptions", void 0);
@@ -10415,25 +10767,22 @@ var SessionStore = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        console.log('login');
-                        _a.label = 1;
-                    case 1:
-                        _a.trys.push([1, 3, , 4]);
+                        _a.trys.push([0, 2, , 3]);
                         return [4 /*yield*/, session_1.login.invoke({ token: token })];
-                    case 2:
+                    case 1:
                         response_1 = _a.sent();
-                        console.log(response_1);
                         mobx_1.runInAction(function () {
                             _this.token = response_1;
+                            _stores_1.stores.userInterface.goto('main');
                         });
-                        return [3 /*break*/, 4];
-                    case 3:
+                        return [3 /*break*/, 3];
+                    case 2:
                         err_1 = _a.sent();
                         mobx_1.runInAction(function () {
                             _stores_1.stores.userInterface.error = err_1;
                         });
-                        return [3 /*break*/, 4];
-                    case 4: return [2 /*return*/];
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
                 }
             });
         }); };
@@ -10446,7 +10795,7 @@ var SessionStore = /** @class */ (function () {
                         _a.sent();
                         mobx_1.runInAction(function () {
                             _this.token = '';
-                            _stores_1.stores.userInterface.closeOptions();
+                            _stores_1.stores.userInterface.goto('login');
                         });
                         return [2 /*return*/];
                 }
@@ -10576,6 +10925,9 @@ var SitesStore = /** @class */ (function () {
                         response = _a.sent();
                         mobx_1.runInAction(function () {
                             _this.sites = response.map(function (url) {
+                                if (url.endsWith('/')) {
+                                    url = url.slice(0, url.length - 1);
+                                }
                                 return new site_1.Site(url);
                             });
                         });
@@ -10583,19 +10935,23 @@ var SitesStore = /** @class */ (function () {
                 }
             });
         }); };
-        this.showUsers = function (site) {
-            site.isUsersShowing = true;
-        };
     }
+    Object.defineProperty(SitesStore.prototype, "editingSite", {
+        get: function () {
+            return this.sites.find(function (site) { return site.isEditing; });
+        },
+        enumerable: true,
+        configurable: true
+    });
     __decorate([
         mobx_1.observable
     ], SitesStore.prototype, "sites", void 0);
     __decorate([
-        mobx_1.action
-    ], SitesStore.prototype, "getSites", void 0);
+        mobx_1.computed
+    ], SitesStore.prototype, "editingSite", null);
     __decorate([
         mobx_1.action
-    ], SitesStore.prototype, "showUsers", void 0);
+    ], SitesStore.prototype, "getSites", void 0);
     return SitesStore;
 }());
 exports.SitesStore = SitesStore;

@@ -6,7 +6,7 @@ import { App } from '@components/App';
 import { stores } from '@stores';
 
 window.onload = async () => {
-  stores.session.update()
+  await stores.session.update()
 
   let root = document.getElementById('root');
 

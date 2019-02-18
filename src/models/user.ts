@@ -9,8 +9,13 @@ export interface UserMetadata {
 }
 
 export class User {
-  constructor (public username: string, public site: Site) { }
+  constructor (username: string, site: Site) {
+    this.site = site;
+    this.username = username;
+  }
 
+  @observable site: Site;
+  @observable username: string = '';
   @observable password: string = '';
   @observable isSelected: boolean = false;
 

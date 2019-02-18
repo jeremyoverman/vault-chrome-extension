@@ -10,14 +10,12 @@ export class SessionStore {
   }
 
   @action login = async (token: string) => {
-    console.log('login')
     try {
       let response = await login.invoke({ token })
 
-      console.log(response)
-
       runInAction(() => {
         this.token = response
+        stores.userInterface.goto('main')
       })
     } catch (err) {
       runInAction(() => {
@@ -31,7 +29,7 @@ export class SessionStore {
 
     runInAction(() => {
       this.token = ''
-      stores.userInterface.closeOptions()
+      stores.userInterface.goto('login')
     })
   }
 

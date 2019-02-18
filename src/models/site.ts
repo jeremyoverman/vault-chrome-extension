@@ -6,8 +6,6 @@ import { User } from "./user";
 export class Site {
   constructor (public url: string) { }
 
-  @observable username: string = '';
-  @observable password: string = '';
   @observable users: User[] = []
 
   @computed get selectedUser () {
@@ -21,7 +19,13 @@ export class Site {
     return user;
   }
 
-  @observable isUsersShowing: Boolean = false
+  @observable isUsersShowing: boolean = false
+  @observable isEditing: boolean = false
+
+  @action edit = () => {
+    this.isEditing = true
+    stores.userInterface.goto('edit_site')
+  }
 
   @action deselectUsers = () => {
     this.users.forEach(user => user.deselect())

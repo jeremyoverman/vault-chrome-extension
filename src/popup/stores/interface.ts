@@ -1,24 +1,30 @@
 import { observable, action } from "mobx";
 
 export class UserInterfaceStore {
+  last_panel: string = 'main';
+
   @observable error: Error | null = null;
-  @observable isOptionsOpen: boolean = false;
+  @observable panel: string = 'main';
+
+  @action goto = (panel: string) => {
+    this.last_panel = `${this.panel}`;
+    this.panel = panel;
+  }
 
   @action closeError = () => {
     this.error = null;
   }
 
-  @action openOptions = () => {
-    this.isOptionsOpen = true
-  }
-
-  @action closeOptions = () => {
-    this.isOptionsOpen = false
+  @action back = () => {
+    this.goto(this.last_panel)
   }
 
   @action toggleOptions = () => {
-    console.log(this)
-    this.isOptionsOpen = !this.isOptionsOpen
+    if (this.panel === 'options') {
+      this.back()
+    } else {
+      this.goto('options')
+    }
   }
 }
 
